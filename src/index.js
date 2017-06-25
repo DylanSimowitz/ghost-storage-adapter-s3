@@ -1,8 +1,9 @@
-import AWS from 'aws-sdk'
-import BaseStore from 'ghost-storage-base'
-import { join } from 'path'
-import Promise, { promisify } from 'bluebird'
-import { readFile } from 'fs'
+const AWS = require('aws-sdk')
+const BaseStore = require('ghost-storage-base')
+const join = require('path').join
+const Promise = require('bluebird')
+const promisify = require('bluebird').promisify
+const readFile = require('fs').readFile
 
 const readFileAsync = promisify(readFile)
 
