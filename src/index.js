@@ -1,5 +1,5 @@
 import AWS from 'aws-sdk'
-import BaseStore from '../../../core/server/storage/base'
+import BaseStore from 'ghost-storage-base'
 import { join } from 'path'
 import Promise, { promisify } from 'bluebird'
 import { readFile } from 'fs'
@@ -108,6 +108,12 @@ class Store extends BaseStore {
             })
             .pipe(res)
     }
+  }
+
+  read() {
+    /*
+     * Dummy function as ghost needs it
+     */
   }
 }
 
