@@ -74,7 +74,7 @@ class Store extends BaseStore {
 
     return new Promise((resolve, reject) => {
       Promise.all([
-        this.getUniqueFileName(this, image, directory),
+        this.getUniqueFileName(image, directory),
         readFileAsync(image.path)
       ]).then(([ fileName, file ]) => (
         this.s3()
